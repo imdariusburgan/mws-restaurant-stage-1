@@ -48,6 +48,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   /*padding: 25px;*/
   text-align: center;
   text-transform: uppercase;
+  bottom: 0;
+  width: 100%;
+  padding:20px;
+  box-sizing: border-box;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -108,11 +112,15 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
+  height: 100%;
   background-color: #3397DB;
   align-items: center;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0px 50px 0 50px;
+  box-sizing: border-box;
 }
 .filter-options h2 {
   color: white;
@@ -129,8 +137,10 @@ nav h1 a {
   height: 35px;
   letter-spacing: 0;
   margin: 10px;
+  min-width: 200px;
+  width:80%;
   padding: 0 10px;
-  width: 200px;
+  flex: 1;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -191,7 +201,8 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   top: 0;
   width: 100%;
   z-index: 1001;
@@ -212,8 +223,9 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
   width: 100%;
+  padding:20px;
+  box-sizing: border-box;
 }
 #restaurant-name {
   color: #f18200;
@@ -224,6 +236,7 @@ nav h1 a {
   margin: 15px 0 30px;
   text-transform: uppercase;
   line-height: 1.1;
+  text
 }
 #restaurant-img {
   width: 90%;
@@ -239,7 +252,6 @@ nav h1 a {
   font-size: 12pt;
   font-weight: 300;
   letter-spacing: 10px;
-  margin: 0 0 20px;
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
@@ -247,18 +259,17 @@ nav h1 a {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-#restaurant-container {
-  /*margin-top: 130px;*/
-}
 
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  /*padding: 40px 40px 30px;*/
   width: 100%;
+  box-sizing: border-box;
+  padding:30px 0 30px 40px;
+  display:flex;
+  flex-direction: column;
 }
 #reviews-container {
-  /*padding: 30px 40px 80px;*/
 }
 #reviews-container h2 {
   color: #f58500;
