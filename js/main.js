@@ -73,10 +73,10 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+    center: [40.722216, -73.987501],
+    zoom: 12,
+    scrollWheelZoom: false
+  });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiaW1kYXJpdXNidXJnYW4iLCJhIjoiY2pqYm9wZXJ1M3JobzNxbzR0MWFzdWdoZyJ9.3sZa_LWuctlJTEOMZn5FUA',
     maxZoom: 18,
@@ -179,7 +179,9 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  more.setAttribute('role', 'button');
+  more.setAttribute('aria-label', `Click to view details about ${restaurant.name}`);
+  li.append(more);
 
   return li
 }
