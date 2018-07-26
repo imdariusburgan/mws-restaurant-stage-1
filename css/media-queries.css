@@ -9,7 +9,7 @@
         width: 50%;
         position: fixed;
         right:0;
-        min-height: 80vh;
+        min-height: 78%;
     }
     .filter-options {
         flex-direction: row;
