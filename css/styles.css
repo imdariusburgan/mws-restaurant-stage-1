@@ -259,6 +259,8 @@ nav h1 a {
   display: flex;
   padding: 1em;
   flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 #reviews-container {
   /*padding: 30px 40px 80px;*/
@@ -273,6 +275,9 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #reviews-list li {
   background-color: #fff;
