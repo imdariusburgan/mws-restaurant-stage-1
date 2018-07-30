@@ -1,17 +1,14 @@
-@charset "utf-8";
+/*@charset "utf-8";
 /* CSS Document */
 
-@media only screen and (min-width: 1000px) {
-    #restaurant-container, #reviews-container {
-        width:50%;
+@media only screen and (max-width: 780px) {
+    .detailBox {
+        flex-direction: column-reverse;
     }
     .inside #map-container {
-        width: 50%;
-        position: fixed;
-        right:0;
-        min-height: 78%;
+        max-width:800px;
     }
-    .filter-options {
-        flex-direction: row;
+    #restaurant-hours {
+        margin-bottom: 30px;
     }
 }
