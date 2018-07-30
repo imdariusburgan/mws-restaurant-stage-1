@@ -40,6 +40,6 @@ self.addEventListener('activate', function(e) {
                     return caches.delete(thisCacheName);
                 }
             }))
-})
+        })
     )
 })
