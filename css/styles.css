@@ -8,7 +8,7 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
+	background-color: #f3f3f3;
 	margin: 0;
 	position:relative;
 }
@@ -40,8 +40,13 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   background-color: #f3f3f3;
   min-height: 100%;
 }
+#maincontent.inside {
+  max-width:1200px;
+  margin:auto;
+}
+
 #footer {
-  background-color: #444;
+  background-color: #252831;
   color: #aaa;
   /*font-size: 8pt;*/
   font-size:10px;
@@ -76,6 +81,7 @@ nav h1 a {
     margin: 0;
     /*width: calc(50% - 80px);*/
     max-width:100%;
+    text-align: center;
 
 }
 
@@ -111,7 +117,7 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   max-width: 100%;
-  background-color: #3397DB;
+  background-color:#252831;
   align-items: center;
   padding: 1em;
   text-align: center;
@@ -199,12 +205,15 @@ nav h1 a {
   z-index: 9999;
 }
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
-  /*height: 87%;
+  /*background: blue none repeat scroll 0 0;
+  height: 87%;
   position: fixed;
   right: 0;
   top: 80px;*/
-  height:300px;
+  height: 200px;
+  width: 100%;
+  max-width: 420px;
+
 }
 .inside #map {
   background-color: #ccc;
@@ -225,17 +234,17 @@ nav h1 a {
   font-size: 20pt;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 15px 0 30px;
+  margin: 15px 0 0;
   text-transform: uppercase;
   line-height: 1.1;
 }
 #restaurant-img {
-  width: 90%;
-  border-radius: 40px 0 0 0;
+  max-width: 100%;
 }
 #restaurant-address {
-  font-size: 12pt;
-  margin: 10px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0px 30px;
 }
 #restaurant-cuisine {
   background-color: #333;
@@ -247,7 +256,8 @@ nav h1 a {
   /*padding: 2px 0;*/
   text-align: center;
   text-transform: uppercase;
-  width: 90%;
+  width: 100%;
+  max-width: 800px;
   box-sizing: border-box;
   padding:1em;
 }
@@ -288,8 +298,9 @@ nav h1 a {
   overflow: hidden;
   /*padding: 0 20px 20px;*/
   position: relative;
-  width: 85%;
-  border-radius: 15px 0 0 0;
+  width: 100%;
+  max-width:800px;
+  /* border-radius: 15px 0 0 0; */
 }
 #reviews-list li p {
   /*margin: 0 0 10px;*/
@@ -303,7 +314,7 @@ nav h1 a {
   justify-content: space-between;
   background: #444;
   padding: 0 10px 0 10px;
-  border-radius: 15px 0 0 0;
+  /* border-radius: 15px 0 0 0; */
 }
 
 .reviewName {
@@ -332,4 +343,14 @@ nav h1 a {
 .reviewComments {
   padding: 0 10px 0px 10px;
   font-size:14px;
+}
+
+.detailBox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
