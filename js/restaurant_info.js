@@ -159,11 +159,13 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById("reviews-container");
   const title = document.createElement("h2");
   title.innerHTML = "Reviews";
+  title.tabIndex = "0";
   container.appendChild(title);
 
   if (!reviews) {
     const noReviews = document.createElement("p");
     noReviews.innerHTML = "No reviews yet!";
+    noReviews.tabIndex = "0";
     container.appendChild(noReviews);
     return;
   }
@@ -186,11 +188,13 @@ createReviewHTML = review => {
   const name = document.createElement("p");
   name.className = "reviewName";
   name.innerHTML = review.name;
+  name.tabIndex = "0";
   span.appendChild(name);
 
   const date = document.createElement("p");
   date.className = "reviewDate";
   date.innerHTML = review.date;
+  date.tabIndex = "0";
   span.appendChild(date);
 
   li.appendChild(span);
@@ -203,6 +207,7 @@ createReviewHTML = review => {
   const comments = document.createElement("p");
   comments.className = "reviewComments";
   comments.innerHTML = review.comments;
+  comments.tabIndex = "0";
   li.appendChild(comments);
 
   return li;
