@@ -2,13 +2,13 @@
 /* CSS Document */
 
 @media only screen and (max-width: 780px) {
-    .detailBox {
-        flex-direction: column-reverse;
-    }
-    .inside #map-container {
-        max-width:800px;
-    }
-    #restaurant-hours {
-        margin-bottom: 30px;
-    }
+  .detailBox {
+    flex-direction: column;
+  }
+  .inside #map-container {
+    max-width: 800px;
+  }
+  #restaurant-hours {
+    margin-bottom: 30px;
+  }
 }
