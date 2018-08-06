@@ -45,3 +45,27 @@ self.addEventListener("activate", function(e) {
     })
   );
 });
+
+self.addEventListener("fetch", function(e) {
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      if (response) {
+        return response;
+      }
+      const fetchRequest = e.request.clone();
+
+      return fetch(fetchRequest).then(function(response) {
+        if (!response || response.status !== 200 || response.type !== "basic") {
+          return response;
+        }
+        const responseToCache = response.clone();
+
+        caches.open(cacheName).then(function(cache) {
+          cache.put(e.request, responseToCache);
+        });
+
+        return response;
+      });
+    })
+  );
+});
